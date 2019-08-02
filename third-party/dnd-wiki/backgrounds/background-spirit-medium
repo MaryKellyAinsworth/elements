@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Spirit Medium</name>
+        <description>5e homebrew</description>
+        <author url="http://www.dandwiki.com/wiki/5e_Homebrew">D&amp;D Wiki</author>
+        <update version="0.0.1">
+            <file name="background-spirit-medium.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/third-party/dnd-wiki/backgrounds/background-spirit-medium.xml" />
+        </update>
+    </info>
+    <element name="Spirit Medium" type="Background" source="D&amp;D Wiki" id="ID_WIKI_BACKGROUND_SPIRIT_MEDIUM">
+        <description>
+            <p>You’ve devoted years of your life to communicating and working with creatures like ghosts and spirits, most likely with the aid of magic or extraordinary circumstances. You may study the processes of the body and soul, as well as the nature of afterlife and undeath, to build, or even become, a spiritual bridge. You may serve a god or faith involving the forces of death, lost a loved one who inexplicably returned, or simply have a supernatural gift. However, almost all spirit mediums will also have some training in the studies of magic, theology, biology, as well as some experience with undead creatures and the paranormal. Mediums may be treated with fear and suspicion as they often possess grim personalities, study necromancy, or are magnets of supernatural activity. It can also be a dangerous line of work, involving frightening creatures and constant confrontation of death.</p>
+            <p>
+                <span class="emphasis">Skill Proficiencies:</span>Two skill proficiencies from Medicine, Religion, Arcana, and Perception.<br/>
+                <span class="emphasis">Tool Proficiencies:</span>Herbalism Kit<br/>
+                <span class="emphasis">Languages:</span>One exotic language from Infernal, Abyssal, and Celestial.<br/>
+                <span class="emphasis">Equipment:</span>A holy symbol, a flask of holy water, a silver mirror, a flashlight and 4 batteries, 10 candles, a lighter or matchbox, a ritual ceremonial accessory, one gothic trinket from the gothic trinket table.
+            </p>
+            <div element="ID_WIKI_BACKGROUND_SPIRIT_MEDIUM_SPIRIT_SENSE" />
+            <h5>SUGGESTED CHARACTERISTICS</h5>
+        </description>
+        <setters>
+            <set name="sourceUrl">https://www.dandwiki.com/wiki/Spirit_Medium_(5e_Background)</set>
+        </setters>
+        <rules>
+            <select type="Proficiency" name="Skill Proficiency (Spirit Medium)" supports="Spirit Medium" number="2" />
+            <select type="Language" name="Language (Spirit Medium)" supports="Spirit Medium" number="1" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_HERBALISM_KIT" />
+            <grant type="Background Feature" id="ID_WIKI_BACKGROUND_SPIRIT_MEDIUM_SPIRIT_SENSE" />
+            <select name="Personality Trait" type="List" number="2">
+                <item id="1">I’m never afraid, any fearsome situation can be resolved with calm and patience.</item>
+                <item id="2">I’m excellent at telling ghost stories, stories that no one knows are about me. </item>
+                <item id="3">I spend money freely and live life to the fullest, knowing that death can always be around the corner.</item>
+                <item id="4">I often philosophize about the nature of life and death to anyone who will listen.</item>
+                <item id="5">I use my uncanny aura to shock, confuse, and mystify others. </item>
+                <item id="6">	I laugh and joke about death, ignoring mainstream attitudes surrounding it.</item>
+                <item id="7">I read and talk about folklore and horror fiction as if it were scientific fact.</item>
+                <item id="8">If I ever get a gut feeling about someone, I trust it wholeheartedly.</item>
+            </select>
+            <select name="Ideal" type="List">
+                <item id="1">Peace. My goal is to help bring peace and justice to everyone and everything, dead and living. (Good)</item>
+                <item id="2">Enlightenment. Society at large is too close minded to try and understand what I do, but I’ll make them see. (Chaotic)</item>
+                <item id="3">Vengeance. I’ve been violently persecuted in the past, I’m going to make my enemies feel the way they made me feel. (Evil)</item>
+                <item id="4">Order. My job is to help keep a cosmic peace and resolve any supernatural dangers. (Lawful)</item>
+                <item id="5">Any. I’ll stop the spirits that haunt me or die trying. (Any)</item>
+                <item id="6">Justice. As an outcast myself, I always stick up for the oppressed and misunderstood. (Good)</item>
+            </select>
+            <select name="Bond" type="List">
+                <item id="1">I have an animal familiar that I keep a close watch on, in case they spot something no one else can see. </item>
+                <item id="2">I couldn’t help myself; I’ve fallen in love with someone from the other side, now I need to find a way to help them rejoin the living. </item>
+                <item id="3">The spirit of a dead mage taught me some of my spells/skills.</item>
+                <item id="4">I’m an unusually sympathetic person, I feel the emotions of others keenly. </item>
+                <item id="5">I can’t be scared by a monster tale, I only end up arguing in the creature’s defense. </item>
+                <item id="6">Séance is the only way I can speak with my loved ones.</item>
+            </select>
+            <select name="Flaw" type="List">
+                <item id="1">I don’t actually believe in ghosts, I just put on a show of mysticism in order to scam people. </item>
+                <item id="2">I’m not sure if I have a paranormal connection, or if it’s just my terrible drinking habits addling my senses. </item>
+                <item id="3">I refuse to accept that someone could ever just be gone for good.</item>
+                <item id="4">I prefer the company of the dead to that of the living. </item>
+                <item id="5">	I forget that undead creatures can be wild and dangerous, and put myself in danger by approaching them as if they were normal and rational people.</item>
+                <item id="6">I'm insensitive when it comes to talking about difficult subjects, talking about gloom and doom without a thought to the comfort of others.</item>
+            </select>
+        </rules>
+    </element>
+    <element name="Feature: Spirit Sense" type="Background Feature" source="D&amp;D Wiki" id="ID_WIKI_BACKGROUND_BOUNTY_HUNTER_NAMES_FACES_PLACES">
+        <description>
+            <p>You can detect a trace left on an area from undead creatures. This does not tell you what kind of undead, CR, or any other details aside from the fact that they have been through or in that area recently (within the day). Additionally, you can tell if someone you’ve spoken or seen the face of has a history of dealing with undead or experienced a recent death in their social circle or family.</p>
+        </description>
+        <sheet alt="Spirit Sense" />
+    </element>
+    <element name="Skill Proficiency (Medicine)" type="Proficiency" source="D&amp;D Wiki" id="ID_WIKI_BACKGROUND_SPIRIT_MEDIUM_SKILL_PROFICIENCY_MEDICINE">
+    <supports>Spirit Medium</supports>
+    <requirements />
+    <description />
+    <rules>
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_STEALTH" />
+    </rules>
+  </element>
+  <element name="Skill Proficiency (Religion)" type="Proficiency" source="D&amp;D Wiki" id="ID_WIKI_BACKGROUND_SPIRIT_MEDIUM_SKILL_PROFICIENCY_RELIGION">
+    <supports>Spirit Medium</supports>
+    <requirements />
+    <description />
+    <rules>
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_RELIGION" />
+    </rules>
+  </element>
+  <element name="Skill Proficiency (Arcana)" type="Proficiency" source="D&amp;D Wiki" id="ID_WIKI_BACKGROUND_SPIRIT_MEDIUM_SKILL_PROFICIENCY_ARCANA">
+    <supports>Spirit Medium</supports>
+    <requirements />
+    <description />
+    <rules>
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ARCANA" />
+    </rules>
+  </element>
+  <element name="Skill Proficiency (Perception)" type="Proficiency" source="D&amp;D Wiki" id="ID_WIKI_BACKGROUND_SPIRIT_MEDIUM_SKILL_PROFICIENCY_PERCEPTION">
+    <supports>Spirit Medium</supports>
+    <requirements />
+    <description />
+    <rules>
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERCEPTION" />
+    </rules>
+  </element>
+  <element name="Language (Infernal)" type="Language" source="D&amp;D Wiki" id="ID_WIKI_BACKGROUND_SPIRIT_MEDIUM_LANGUAGE_PROFICIENCY_INFERNAL">
+    <supports>Spirit Medium</supports>
+    <requirements />
+    <description />
+    <rules>
+      <grant type="Language" id="ID_LANGUAGE_INFERNAL" />
+    </rules>
+  </element>
+ <element name="Language (Abyssal)" type="Language" source="D&amp;D Wiki" id="ID_WIKI_BACKGROUND_SPIRIT_MEDIUM_LANGUAGE_PROFICIENCY_ABYSSAL">
+    <supports>Spirit Medium</supports>
+    <requirements />
+    <description />
+    <rules>
+      <grant type="Language" id="ID_LANGUAGE_ABYSSAL" />
+    </rules>
+  </element>
+  <element name="Language (Celestial)" type="Language" source="D&amp;D Wiki" id="ID_WIKI_BACKGROUND_SPIRIT_MEDIUM_LANGUAGE_PROFICIENCY_CELESTIAL">
+    <supports>Spirit Medium</supports>
+    <requirements />
+    <description />
+    <rules>
+      <grant type="Language" id="ID_LANGUAGE_CELESTIAL" />
+    </rules>
+  </element>
+</elements>
